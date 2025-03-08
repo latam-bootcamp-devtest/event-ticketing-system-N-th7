@@ -7,7 +7,7 @@ const Card = (props) => {
       };
       
     return(
-        <div className="w3-card-4 w3-col m4 l3 w3-margin">
+        <div className="w3-card-4 w3-col m4 l3 w3-margin" onClick = {props.onClick}>
             <h2>Event: {props.name}</h2>
             <p>Date: {dateFormat(props.date)}</p>
             <p>Price: {props.price}</p>

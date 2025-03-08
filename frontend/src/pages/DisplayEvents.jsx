@@ -18,8 +18,8 @@ const DisplayEvents = () =>{
         }
       };
 
-      const nav = () => {
-        
+      const nav = (id) => {
+        navigate("/eventdetails/"+id)
       }
   
 
@@ -34,7 +34,7 @@ const DisplayEvents = () =>{
                 <div>
                     {events ? (
                     <div className="w3-row w3-margin w3-center">
-                        {events.map((event)=>(<Card name= {event.name} date = {event.date} price= {event.price} onclick= {nav}></Card>))}
+                        {events.map((event)=>(<Card name= {event.name} date = {event.date} price= {event.price} onClick= {() =>(nav(event.id))}></Card>))}
                     </div>
                     ) : (
                         
